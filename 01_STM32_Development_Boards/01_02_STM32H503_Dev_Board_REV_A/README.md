@@ -10,3 +10,22 @@ My first revision of this board actually used an STM32C5A microcontroller chip a
 I also streamlined the storage and choose single SPI for two flash chips as they are easier to route and are capped by the 12 Mbps of USB-FS anyways. Routing a full Quad-SPI or OctoSPI bus, while cool, would be a waste of engineering hours for zero ROI.
 
 Despite some DFM hiccups, I was able to get the board build and assembled and am currently going through the bring up and firmware writing phase. And let me say, this phase has taught me a lot more about electronics and hardware than actually designing the board in Altium and has left me with a lot of learnings and a laundry list of changes for REV B which I am currently working through.
+
+# Engineering Problem
+
+## Objective
+
+Design a successor to the STM32C5A board that keeps in mind DFM and DFA.
+
+## Requirements
+
+The board must meet the following requirements
+
+1. Have a microcontroller with a Cortex-M33 CPU.
+2. External SPI flash
+3. USB-FS
+4. UART and I2C broken out.
+5. User buttons
+
+# Methodology
+
