@@ -1,0 +1,5 @@
+# Executive Summary
+
+To celebrate the inaugural DEFSEC-West in Calgary, I decided to construct an Edge AI appliance that would use the new STM32N657 Nucleo board with a camera to identify objects and fire of an interrupt if certain objects were detected.
+The magic of the STM32N657 was its NPU that would do all the heavy lifting of processing the images using a convolutional neural network leaving the CPU free to do other tasks or go to sleep mode. The camera would used a DCMI (Digital Camera Interface) which would take the frames from the camera and put them in the RAM using DMA. The NPU would then read the image and if it identifies an object of interest, it would fire an interrupt and the CPU would do an action, in this case, light up an LED.
+Unfortunately, my DuPont jumper cables would suffer too much EMI and the DMA register would get corrupted. Despite this, it was a phenomenal lesson in the importance of shielding which I will never forget.
